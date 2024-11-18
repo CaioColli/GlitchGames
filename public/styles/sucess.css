@@ -1,0 +1,19 @@
+.sucessMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    padding: 48px 24px;
+}
+
+.sucessTitle {
+    font-size: clamp(1rem, -0.375rem + 6vw, 3rem);
+    font-weight: 900;
+    text-align: center;
+}
+
+.sucessButtonsContainer {
+    display: flex;
+    gap: 16px;
+}

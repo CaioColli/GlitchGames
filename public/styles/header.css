@@ -1,0 +1,22 @@
+header {
+    background-color: #000000;
+    padding: 24px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.iconLogo {
+    max-height: 64px;
+    cursor: pointer;
+}
+
+.registerButton {
+    width: fit-content;
+    height: fit-content;
+    padding: 8px 16px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
