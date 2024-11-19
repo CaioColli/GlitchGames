@@ -24,7 +24,7 @@ if (file_exists($jsonFilePath)) {
             <img src="./images/pageLogo.svg" alt="Logo da página" class="iconLogo">
         </a>
 
-        <a href="cadaster.html">
+        <a href="cadaster.php">
             <button class="registerButton">Cadastrar Game</button>
         </a>
     </header>

@@ -22,5 +22,23 @@
         "launch": "2008",
         "picture": "https:\/\/img.elo7.com.br\/product\/zoom\/25CD9F8\/big-poster-gamer-gta-4-lo003-tamanho-90x60-cm-poster-de-games.jpg",
         "gender": "A\u00e7\u00e3o "
+    },
+    {
+        "name": "Fortnite ",
+        "launch": 2017,
+        "picture": "https:\/\/t.ctcdn.com.br\/oTGQRst_C6xFrhAfHlG_5-purVU=\/1024x576\/smart\/i567718.jpeg",
+        "gender": "Fps"
+    },
+    {
+        "name": "Grand Theft Auto VI",
+        "launch": 2025,
+        "picture": "https:\/\/sm.ign.com\/ign_br\/news\/g\/gta-fans-a\/gta-fans-are-going-full-zoom-and-enhance-on-gta-6-and-reckon_esce.jpg",
+        "gender": "A\u00e7\u00e3o"
+    },
+    {
+        "name": "League of Legends",
+        "launch": 2009,
+        "picture": "\/images\/defaultPicture.jpg",
+        "gender": "Moba"
     }
 ]

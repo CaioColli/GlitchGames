@@ -16,7 +16,7 @@
     </header>
 
     <main class="postFormMain">
-        <h1 class="postFormTitle">O jogo <?php echo $_GET['game']; ?> foi inserido com sucesso!</h1>
+        <h1 class="postFormTitle"><?php echo htmlspecialchars($_GET['error']); ?></h1>
 
         <div class="postFormButtonsContainer">
             <a href="index.php">
@@ -24,11 +24,10 @@
             </a>
 
             <a href="cadaster.php">
-                <button class="styledButon">Cadastrar novo jogo</button>
+                <button class="styledButon">Cadastrar novamente</button>
             </a>
         </div>
     </main>
-
 </body>
 
 </html>
