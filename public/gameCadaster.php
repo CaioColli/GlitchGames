@@ -1,6 +1,8 @@
     <?php
 
-    function gameCadaster(string $gameName, int $gameLaunch, string $gamePicture, string $gameGender): array
+    require __DIR__ . '/model/game.php';
+
+    function gameCadaster($gameName, $gameLaunch, $gamePicture, $gameGender)
     {
 
         $defaultPicture = '/images/defaultPicture.jpg';
@@ -12,20 +14,22 @@
             throw new InvalidArgumentException("Ano de lançamento inválido");
         }
 
-        return [
-            "name" => htmlspecialchars($gameName),
-            "launch" => $gameLaunch,
-            "picture" => htmlspecialchars($gamePicture),
-            "gender" => htmlspecialchars($gameGender),
-        ];
+        $game = new Game();
+
+        $game->name = $gameName;
+        $game->launch = $gameLaunch;
+        $game->picture = $gamePicture;
+        $game->gender = $gameGender;
+
+        return $game;
     }
 
     try {
         $data = gameCadaster(
-            gameName: $_POST['gameName'],
-            gameLaunch: $_POST['gameLaunch'],
-            gamePicture: $_POST['gamePicture'], // Usa o null como fallback
-            gameGender: $_POST['gameGender'],
+            $_POST['gameName'],
+            $_POST['gameLaunch'],
+            $_POST['gamePicture'],
+            $_POST['gameGender'],
         );
 
         // Lugar onde vai ser salvo os dados Json
@@ -42,9 +46,9 @@
             }
 
             // Adiciona o novo dado ao array existente
-            $existingData[] = $data;
+            $existingData[] = (array) $data; // Converte objeto em array
         } else {
-            $existingData = [$data];
+            $existingData = [(array) $data]; // Converte array em objeto
         }
 
         // Codifica os dados JSON
@@ -55,11 +59,11 @@
 
         // header é usado para redirecionar o usuário.
         // O uso do ? serve para indentificar que tudo após ele é parametro.
-        header('Location: /sucess.php?game=' . $data['name']);
+        header('Location: /sucessPage.php?game=' . urlencode($data->name));
 
         exit;
     } catch (InvalidArgumentException $err) {
-        header(('Location: /error.php?error=' . urlencode($err->getMessage())));
+        header(('Location: /errorPage.php?error=' . urlencode($err->getMessage())));
 
         exit;
     }

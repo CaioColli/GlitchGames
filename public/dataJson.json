@@ -36,9 +36,9 @@
         "gender": "A\u00e7\u00e3o"
     },
     {
-        "name": "League of Legends",
-        "launch": 2009,
+        "name": "Pubg",
+        "launch": "2017",
         "picture": "\/images\/defaultPicture.jpg",
-        "gender": "Moba"
+        "gender": "BattleRoyale"
     }
 ]

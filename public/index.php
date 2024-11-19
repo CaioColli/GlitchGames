@@ -1,4 +1,5 @@
 <?php
+
 $jsonFilePath = __DIR__ . '/dataJson.json';
 
 if (file_exists($jsonFilePath)) {
@@ -24,7 +25,7 @@ if (file_exists($jsonFilePath)) {
             <img src="./images/pageLogo.svg" alt="Logo da página" class="iconLogo">
         </a>
 
-        <a href="cadaster.php">
+        <a href="/cadasterPage.php">
             <button class="registerButton">Cadastrar Game</button>
         </a>
     </header>
